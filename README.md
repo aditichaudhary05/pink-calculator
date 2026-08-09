@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-# pink-calculator
-=======
-# 🌸 PinkPulse — Aesthetic Pink Calculator 💕
+# 🌸 PinkPulse - Pink Calculator 💕
 
 A modern, visually stunning, feature-packed **Pink-Themed Calculator** web application built with HTML, CSS, and Vanilla JavaScript. Designed with glassmorphism, floating ambient background animations, multiple pink sub-themes, scientific functions, unit/tip converter, history log, Web Audio sound effects, and full keyboard navigation.
 
@@ -66,4 +63,3 @@ No installation or node modules required!
 ## 📄 License
 
 MIT License — feel free to use and customize! 💕
->>>>>>> 668f936 (Initial commit: PinkPulse aesthetic pink calculator web application)

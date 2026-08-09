@@ -1,5 +1,5 @@
 /**
- * PinkPulse Calculator — Main Application Script
+ * PinkPulse - Pink Calculator Script
  * Features: Standard & Scientific Math, Tip & Unit Converter, History Persistence,
  * Web Audio Click Feedback, Theme Engine, Keyboard Support.
  */
