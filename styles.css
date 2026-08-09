@@ -1,0 +1,1029 @@
+/* ==========================================================================
+   PinkPulse Calculator — Aesthetic Pink Stylesheet
+   Themes: Blush Soft | Neon Cyberpink | Rose Gold | Dark Cherry
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Theme Variables & Root Setup
+   -------------------------------------------------------------------------- */
+:root {
+    /* DEFAULT THEME: Blush Soft */
+    --bg-gradient: linear-gradient(135deg, #ffeef4 0%, #ffd6e5 50%, #fca1c9 100%);
+    --orb-1: #ffb7d5;
+    --orb-2: #ff7ebb;
+    --orb-3: #ffc2df;
+    --orb-4: #f48fb1;
+    
+    --card-bg: rgba(255, 255, 255, 0.45);
+    --card-border: rgba(255, 255, 255, 0.7);
+    --card-shadow: 0 20px 50px rgba(230, 80, 140, 0.15), 0 10px 20px rgba(0, 0, 0, 0.05);
+
+    --text-main: #4a253b;
+    --text-muted: #9e6482;
+    --text-subtle: #c288a6;
+    
+    --display-bg: rgba(255, 255, 255, 0.65);
+    --display-border: rgba(255, 255, 255, 0.8);
+    --display-shadow: inset 0 2px 6px rgba(180, 50, 100, 0.08);
+
+    --btn-num-bg: rgba(255, 255, 255, 0.65);
+    --btn-num-text: #4a253b;
+    --btn-num-shadow: 0 4px 12px rgba(220, 100, 150, 0.12);
+
+    --btn-op-bg: linear-gradient(135deg, #ff94c2, #ff60a8);
+    --btn-op-text: #ffffff;
+    --btn-op-shadow: 0 4px 15px rgba(255, 96, 168, 0.35);
+
+    --btn-action-bg: rgba(255, 220, 235, 0.7);
+    --btn-action-text: #b33971;
+
+    --btn-equals-bg: linear-gradient(135deg, #ff4081, #e91e63);
+    --btn-equals-text: #ffffff;
+    --btn-equals-shadow: 0 6px 20px rgba(233, 30, 99, 0.45);
+
+    --accent-pink: #ff4081;
+    --drawer-bg: rgba(255, 245, 249, 0.85);
+    --glass-blur: blur(20px);
+}
+
+/* --------------------------------------------------------------------------
+   THEME PRESETS
+   -------------------------------------------------------------------------- */
+[data-theme="cyberpink"] {
+    --bg-gradient: linear-gradient(135deg, #180816 0%, #2b0b28 50%, #440c3c 100%);
+    --orb-1: #ff007f;
+    --orb-2: #d600ff;
+    --orb-3: #ff0055;
+    --orb-4: #8000ff;
+    
+    --card-bg: rgba(35, 12, 33, 0.65);
+    --card-border: rgba(255, 0, 150, 0.35);
+    --card-shadow: 0 20px 60px rgba(255, 0, 128, 0.3), 0 0 30px rgba(255, 0, 255, 0.15);
+
+    --text-main: #ffddf5;
+    --text-muted: #d47cb9;
+    --text-subtle: #8e427b;
+    
+    --display-bg: rgba(18, 5, 17, 0.75);
+    --display-border: rgba(255, 0, 128, 0.4);
+    --display-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 0, 128, 0.2);
+
+    --btn-num-bg: rgba(55, 20, 50, 0.7);
+    --btn-num-text: #ffe0f5;
+    --btn-num-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+
+    --btn-op-bg: linear-gradient(135deg, #ff007f, #b800ff);
+    --btn-op-text: #ffffff;
+    --btn-op-shadow: 0 4px 18px rgba(255, 0, 127, 0.55);
+
+    --btn-action-bg: rgba(90, 25, 75, 0.75);
+    --btn-action-text: #ff85d0;
+
+    --btn-equals-bg: linear-gradient(135deg, #ff0055, #ff00aa);
+    --btn-equals-text: #ffffff;
+    --btn-equals-shadow: 0 6px 25px rgba(255, 0, 170, 0.7);
+
+    --accent-pink: #ff007f;
+    --drawer-bg: rgba(26, 8, 24, 0.92);
+}
+
+[data-theme="rosegold"] {
+    --bg-gradient: linear-gradient(135deg, #fdf4f2 0%, #f6e0da 50%, #e8c4b8 100%);
+    --orb-1: #eab4a5;
+    --orb-2: #d99382;
+    --orb-3: #f5d6cc;
+    --orb-4: #c97969;
+    
+    --card-bg: rgba(255, 250, 248, 0.5);
+    --card-border: rgba(255, 255, 255, 0.85);
+    --card-shadow: 0 20px 50px rgba(180, 110, 95, 0.18);
+
+    --text-main: #3d2621;
+    --text-muted: #8c6055;
+    --text-subtle: #bfa096;
+    
+    --display-bg: rgba(255, 255, 255, 0.7);
+    --display-border: rgba(235, 185, 175, 0.6);
+    --display-shadow: inset 0 2px 6px rgba(120, 60, 50, 0.08);
+
+    --btn-num-bg: rgba(255, 255, 255, 0.75);
+    --btn-num-text: #3d2621;
+    --btn-num-shadow: 0 4px 12px rgba(180, 120, 105, 0.12);
+
+    --btn-op-bg: linear-gradient(135deg, #e39e8c, #c97361);
+    --btn-op-text: #ffffff;
+    --btn-op-shadow: 0 4px 15px rgba(201, 115, 97, 0.35);
+
+    --btn-action-bg: rgba(245, 215, 205, 0.75);
+    --btn-action-text: #8a4132;
+
+    --btn-equals-bg: linear-gradient(135deg, #b85c49, #9c4331);
+    --btn-equals-text: #ffffff;
+    --btn-equals-shadow: 0 6px 20px rgba(156, 67, 49, 0.4);
+
+    --accent-pink: #c97361;
+    --drawer-bg: rgba(253, 244, 242, 0.9);
+}
+
+[data-theme="darkcherry"] {
+    --bg-gradient: linear-gradient(135deg, #1a050d 0%, #330a1b 50%, #4d0a27 100%);
+    --orb-1: #800c3c;
+    --orb-2: #b31254;
+    --orb-3: #540024;
+    --orb-4: #e6196e;
+    
+    --card-bg: rgba(40, 10, 24, 0.7);
+    --card-border: rgba(230, 25, 110, 0.3);
+    --card-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 25px rgba(179, 18, 84, 0.25);
+
+    --text-main: #ffe6f0;
+    --text-muted: #cc7a9c;
+    --text-subtle: #8a4362;
+    
+    --display-bg: rgba(20, 4, 12, 0.85);
+    --display-border: rgba(179, 18, 84, 0.4);
+    --display-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.7);
+
+    --btn-num-bg: rgba(60, 15, 36, 0.75);
+    --btn-num-text: #ffe6f0;
+    --btn-num-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
+
+    --btn-op-bg: linear-gradient(135deg, #d61864, #990f45);
+    --btn-op-text: #ffffff;
+    --btn-op-shadow: 0 4px 16px rgba(214, 24, 100, 0.45);
+
+    --btn-action-bg: rgba(90, 20, 52, 0.8);
+    --btn-action-text: #ff8cb7;
+
+    --btn-equals-bg: linear-gradient(135deg, #ff1a75, #c4004f);
+    --btn-equals-text: #ffffff;
+    --btn-equals-shadow: 0 6px 22px rgba(255, 26, 117, 0.55);
+
+    --accent-pink: #ff1a75;
+    --drawer-bg: rgba(26, 6, 16, 0.95);
+}
+
+/* --------------------------------------------------------------------------
+   2. Global Reset & Body Layout
+   -------------------------------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    overflow-x: hidden;
+    color: var(--text-main);
+    transition: background 0.5s ease, color 0.3s ease;
+    padding: 20px;
+}
+
+/* --------------------------------------------------------------------------
+   3. Ambient Animated Background Orbs
+   -------------------------------------------------------------------------- */
+.ambient-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.6;
+    animation: floatOrbs 18s infinite alternate ease-in-out;
+}
+
+.orb-1 {
+    width: 350px;
+    height: 350px;
+    background: var(--orb-1);
+    top: -50px;
+    left: -50px;
+}
+
+.orb-2 {
+    width: 400px;
+    height: 400px;
+    background: var(--orb-2);
+    bottom: -80px;
+    right: -50px;
+    animation-delay: -5s;
+}
+
+.orb-3 {
+    width: 300px;
+    height: 300px;
+    background: var(--orb-3);
+    top: 40%;
+    left: 60%;
+    animation-delay: -9s;
+}
+
+.orb-4 {
+    width: 250px;
+    height: 250px;
+    background: var(--orb-4);
+    bottom: 20%;
+    left: 10%;
+    animation-delay: -13s;
+}
+
+@keyframes floatOrbs {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        transform: translate(40px, -50px) scale(1.15);
+    }
+    100% {
+        transform: translate(-30px, 30px) scale(0.9);
+    }
+}
+
+/* --------------------------------------------------------------------------
+   4. App Container & Calculator Main Card
+   -------------------------------------------------------------------------- */
+.app-container {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    justify-content: center;
+}
+
+.calculator-card {
+    width: 100%;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border-radius: 28px;
+    box-shadow: var(--card-shadow);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: all 0.4s ease;
+}
+
+/* --------------------------------------------------------------------------
+   5. Header & Actions
+   -------------------------------------------------------------------------- */
+.calc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.brand h1 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    color: var(--text-main);
+}
+
+.sparkle {
+    font-size: 1.1rem;
+    animation: pulseSparkle 2s infinite ease-in-out;
+}
+
+@keyframes pulseSparkle {
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.9; }
+    50% { transform: scale(1.25) rotate(15deg); opacity: 1; }
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-btn {
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text-main);
+    transition: all 0.2s ease;
+}
+
+.icon-btn:hover {
+    background: rgba(255, 255, 255, 0.7);
+    transform: translateY(-2px);
+}
+
+.icon-btn:active {
+    transform: scale(0.92);
+}
+
+.icon {
+    width: 18px;
+    height: 18px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Theme Dropdown */
+.theme-dropdown-wrapper {
+    position: relative;
+}
+
+.theme-menu {
+    position: absolute;
+    top: 46px;
+    right: 0;
+    background: var(--drawer-bg);
+    border: 1px solid var(--card-border);
+    backdrop-filter: var(--glass-blur);
+    border-radius: 16px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    min-width: 160px;
+    animation: fadeInDown 0.2s ease;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.theme-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border: none;
+    background: transparent;
+    color: var(--text-main);
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.2s;
+}
+
+.theme-option:hover, .theme-option.active {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.theme-color-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.blush-dot { background: #ff94c2; }
+.cyber-dot { background: #ff007f; }
+.rose-dot { background: #c97361; }
+.dark-dot { background: #ff1a75; }
+
+/* --------------------------------------------------------------------------
+   6. Mode Tabs
+   -------------------------------------------------------------------------- */
+.mode-tabs {
+    display: flex;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 4px;
+    border-radius: 14px;
+    gap: 4px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 8px 12px;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.tab-btn.active {
+    background: rgba(255, 255, 255, 0.7);
+    color: var(--text-main);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* --------------------------------------------------------------------------
+   7. Display Screen Section
+   -------------------------------------------------------------------------- */
+.display-section {
+    background: var(--display-bg);
+    border: 1px solid var(--display-border);
+    box-shadow: var(--display-shadow);
+    border-radius: 20px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 110px;
+    position: relative;
+}
+
+.display-indicators {
+    display: flex;
+    gap: 6px;
+    position: absolute;
+    top: 12px;
+    left: 16px;
+}
+
+.badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.4);
+    color: var(--accent-pink);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.expression-line {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    min-height: 1.2rem;
+    text-align: right;
+    word-break: break-all;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+    margin-bottom: 4px;
+}
+
+.expression-line::-webkit-scrollbar {
+    display: none;
+}
+
+.result-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.result-line {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--text-main);
+    text-align: right;
+    width: 100%;
+    word-break: break-all;
+    letter-spacing: -0.5px;
+    transition: font-size 0.15s ease;
+}
+
+.copy-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    opacity: 0.6;
+}
+
+.copy-btn:hover {
+    opacity: 1;
+    color: var(--accent-pink);
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* --------------------------------------------------------------------------
+   8. Memory Bar
+   -------------------------------------------------------------------------- */
+.memory-bar {
+    display: flex;
+    justify-content: space-between;
+    gap: 6px;
+}
+
+.mem-btn {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 6px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.mem-btn:hover {
+    background: rgba(255, 255, 255, 0.6);
+    color: var(--accent-pink);
+}
+
+.mem-btn:active {
+    transform: scale(0.94);
+}
+
+/* --------------------------------------------------------------------------
+   9. Keypad Grids & Buttons
+   -------------------------------------------------------------------------- */
+.views-container {
+    position: relative;
+}
+
+.view-panel {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.view-panel.active {
+    display: flex;
+}
+
+/* Quick Scientific Bar */
+.quick-func-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+/* Scientific Grid Extended */
+.scientific-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    margin-bottom: 4px;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Standard 4x5 Keypad Grid */
+.standard-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Button Styling Base */
+.btn {
+    height: 56px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    outline: none;
+}
+
+.btn-num {
+    background: var(--btn-num-bg);
+    color: var(--btn-num-text);
+    box-shadow: var(--btn-num-shadow);
+}
+
+.btn-num:hover {
+    background: rgba(255, 255, 255, 0.85);
+    transform: translateY(-2px);
+}
+
+.btn-op {
+    background: var(--btn-op-bg);
+    color: var(--btn-op-text);
+    box-shadow: var(--btn-op-shadow);
+    border: none;
+    font-size: 1.4rem;
+}
+
+.btn-op:hover {
+    filter: brightness(1.08);
+    transform: translateY(-2px);
+}
+
+.btn-action {
+    background: var(--btn-action-bg);
+    color: var(--btn-action-text);
+    font-size: 1.1rem;
+}
+
+.btn-action:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: translateY(-2px);
+}
+
+.btn-quick, .btn-sci {
+    height: 44px;
+    font-size: 0.95rem;
+    background: rgba(255, 255, 255, 0.35);
+    color: var(--text-main);
+    border-radius: 12px;
+}
+
+.btn-quick:hover, .btn-sci:hover {
+    background: rgba(255, 255, 255, 0.65);
+    color: var(--accent-pink);
+    transform: translateY(-1px);
+}
+
+.btn-equals {
+    background: var(--btn-equals-bg);
+    color: var(--btn-equals-text);
+    box-shadow: var(--btn-equals-shadow);
+    border: none;
+    font-size: 1.6rem;
+}
+
+.btn-equals:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+}
+
+.btn:active, .btn.pressed {
+    transform: scale(0.92) !important;
+    box-shadow: none !important;
+}
+
+/* Click Ripple Animation */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    transform: scale(0);
+    animation: rippleEffect 0.4s linear;
+    pointer-events: none;
+}
+
+@keyframes rippleEffect {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   10. Converter View Styles
+   -------------------------------------------------------------------------- */
+.converter-tabs {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.subtab-btn {
+    flex: 1;
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.3);
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.subtab-btn.active {
+    background: rgba(255, 255, 255, 0.7);
+    color: var(--accent-pink);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.converter-card {
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 18px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-group label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.input-group input[type="number"], .select-styled {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-main);
+    outline: none;
+    width: 100%;
+}
+
+.input-group input[type="range"] {
+    accent-color: var(--accent-pink);
+    cursor: pointer;
+}
+
+.stepper {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    padding: 4px;
+    justify-content: space-between;
+}
+
+.step-btn {
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent-pink);
+    cursor: pointer;
+}
+
+.step-val {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.tip-results, .unit-result-box {
+    display: flex;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.res-box {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 12px;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.res-box.highlight {
+    background: var(--btn-op-bg);
+    color: #ffffff;
+}
+
+.res-box.highlight .res-label {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.res-box.highlight .res-val {
+    color: #ffffff;
+}
+
+.res-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.res-val, .unit-res-val {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.units-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.swap-icon-btn {
+    background: rgba(255, 255, 255, 0.6);
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-bottom: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   11. History Drawer
+   -------------------------------------------------------------------------- */
+.history-drawer {
+    position: fixed;
+    top: 0;
+    right: -360px;
+    width: 340px;
+    height: 100vh;
+    background: var(--drawer-bg);
+    backdrop-filter: var(--glass-blur);
+    border-left: 1px solid var(--card-border);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 24px;
+}
+
+.history-drawer.open {
+    right: 0;
+}
+
+.drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.drawer-header h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.close-drawer-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    line-height: 1;
+}
+
+.history-list {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-right: 4px;
+}
+
+.history-item {
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 14px;
+    padding: 12px 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.history-item:hover {
+    background: rgba(255, 255, 255, 0.75);
+    transform: translateX(-3px);
+}
+
+.hist-expr {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.hist-res {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--accent-pink);
+}
+
+.empty-history {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
+
+.drawer-footer {
+    margin-top: 16px;
+}
+
+.clear-history-btn {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 100, 150, 0.2);
+    color: var(--accent-pink);
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.clear-history-btn:hover {
+    background: rgba(255, 100, 150, 0.4);
+}
+
+.drawer-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    z-index: 150;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+}
+
+.drawer-backdrop.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* --------------------------------------------------------------------------
+   12. Toast Notification & Footer
+   -------------------------------------------------------------------------- */
+.toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(50px);
+    background: var(--btn-op-bg);
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 300;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.calc-footer {
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--text-subtle);
+    margin-top: 4px;
+}
